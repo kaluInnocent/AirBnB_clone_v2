@@ -63,7 +63,7 @@ class HBNBCommand(cmd.Cmd):
 
             kwargs = {}
             for arg in arg_list[1:]:
-                key, value = tuple(arg.split("="))
+                key, value = arg.split("=")
                 if self.is_int(value):
                     kwargs[key] = int(value)
                 elif self.is_float(value):
